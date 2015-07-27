@@ -1,0 +1,15 @@
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile( project(':ejb') )
+    compile group: 'javax.enterprise', name: 'cdi-api', version: '1.1'
+    compile group: 'javax', name: 'javaee-api', version: '6.0'
+}
+
+war { 
+  jar.enabled = false 
+} 
